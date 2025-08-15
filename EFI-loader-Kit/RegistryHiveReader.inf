@@ -1,0 +1,29 @@
+[Defines]
+  INF_VERSION                    = 0x00010006
+  BASE_NAME                      = RegistryHiveReader
+  FILE_GUID                      = 7753b54f-d68e-474c-9b2c-d5df19c29999
+  MODULE_TYPE                    = UEFI_APPLICATION
+  ENTRY_POINT                    = UefiMain
+
+[Sources]
+  RegistryHiveReader.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+
+[LibraryClasses]
+  DevicePathLib
+  BaseMemoryLib
+  UefiLib
+  UefiBootServicesTableLib
+  UefiApplicationEntryPoint
+  DevicePathLib
+  MemoryAllocationLib
+  FileHandleLib
+  ShellCEntryLib
+
+[Protocols]
+  gEfiLoadedImageProtocolGuid
+  gEfiSimpleFileSystemProtocolGuid
+
+
